@@ -1,0 +1,19 @@
+  <div class="flex flex-col justify-center items-center">
+    <p class="text-white text-xl tracking-widest">Connect to the World</p>
+
+          <div class="carousel" data-flickity='{ "autoPlay": 3000, "pauseAutoPlayOnHover": false }'>
+            <div *ngFor="let item of carouselItems" class="carousel-cell">
+              <img class="w-full h-full object-cover relative border-b-8 border-cyan-500 bg-slate-500 opacity-60" [src]="item.imageUrl" alt="">
+              <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                <h1 class="text-5xl font-extrabold bg-cyan-600 px-8 py-1 bg-opacity-70 border-b-4 border-black shadow-md">
+                  <i [class]="item.iconClass"></i>
+                  {{ item.title }}
+                </h1>
+                <p class="text-xl bg-black px-8 py-2 bg-opacity-70 border-b-4 border-cyan-600 shadow-md">{{ item.description }}</p>
+                <a href="#" class="bg-cyan-600 text-white py-2 px-6 hover:bg-cyan-500 transition shadow-md">{{ item.buttonText }}</a>
+              </div>
+            </div>
+          </div>
+  </div>
+
+
